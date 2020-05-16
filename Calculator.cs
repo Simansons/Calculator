@@ -30,11 +30,13 @@ namespace Calculator
                 buttonName = "button" + i;
                 button = (Button)this.Controls[buttonName];
                 button.Text = i.ToString();             
-            }
-
-            button0.Text = "0";
-
+            }       
         }
 
+        private void Button_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            Displey.Text += button.Text;
+        }
     }
 }
